@@ -90,6 +90,11 @@ var finances = [
     // The total number of months included in the dataset.
 // figure out how many rows there are in the finances variable
 
+console.log("Financial Analysis");
+
+console.log("----------------------------------");
+
+
 console.log("Total Months: " + finances.length);
 
 var netTotal = 0;
@@ -123,7 +128,7 @@ var sum = changes.reduce(function(total, currentValue) {
 
 var average = sum / changes.length;
 
-console.log(average);
+console.log("Average change $" + average);
 
 
 // (Total/total number of changes) ===> total change/(months - 1)
