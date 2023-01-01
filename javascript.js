@@ -141,6 +141,18 @@ console.log("Average change $" + average);
 //   check the last increase. If it's bigger than 0, keep track of the new biggest one.
 //   in a loop
 
+var greatestIncrease = 0;
+var greatestIncreaseMonth = '';
+for (var i = 0; i < finances.length; i++) {
+  var increase = finances[i][1] - (finances[i-1] ? finances[i-1][1] : 0);
+  if (increase > greatestIncrease) {
+    greatestIncrease = increase;
+    greatestIncreaseMonth = finances[i][0];
+  }
+}
+console.log(greatestIncreaseMonth + ' had the greatest increase of $' + greatestIncrease);
+
+
 
 
 // The greatest decrease in losses (date and amount) over the entire period.
