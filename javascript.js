@@ -156,8 +156,20 @@ console.log(greatestIncreaseMonth + ' had the greatest increase of $' + greatest
 
 
 // The greatest decrease in losses (date and amount) over the entire period.
-// console output format!
 
+var minLoss = 0;
+var minLossMonth = "";
+
+for (var i = 0; i < finances.length; i++) {
+  var month = finances[i][0];
+  var value = finances[i][1];
+  if (value < minLoss) {
+    minLoss = value;
+    minLossMonth = month;
+  }
+}
+
+console.log(minLossMonth + ' had the greatest decrease of $' + minLoss);
 
 
 
